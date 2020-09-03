@@ -1,12 +1,13 @@
 import random
 print("Welcome to the number guessing game!")
-while True:
+while True: #Create loop for 'Would you like to play again'
     rng = random.randrange(0,50)
     print("Guess from 0 to 50.")
     numGuess = 0
     while numGuess <= 5:
         guess = input()
         guess = int(guess)
+        #Doesn't reduce guesses if user guesses number out of range.
         if guess > 50:
             print("Please guess within the range.")
             continue
